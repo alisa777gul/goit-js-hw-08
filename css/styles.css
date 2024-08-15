@@ -52,14 +52,17 @@ display: block;
 
 }
 
-.gallery-item{
-    flex-basis: calc((100% - 24px * 2)/3);
-}
 
-.containe{
-    min-width: 1128px;
-}
+.container{
+    max-width: 1128px;
+    margin: 0 auto;}
 
 .modal{
     max-width: 1112px;
+   
+}
+
+.gallery-link{
+    max-width: 320px;
+    display: block;
 }

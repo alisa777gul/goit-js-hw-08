@@ -1,8 +1,5 @@
 'use strict'
 
-
-
-
 const images = [
   {
     preview: 'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
@@ -51,10 +48,10 @@ const images = [
   },
 ];
 
-// Получаем ссылку на элемент галереи
+
 const gallery = document.querySelector('.gallery');
 
-// Генерация HTML-разметки для галереи
+
 const markup = images
   .map(
     ({ preview, original, description }) => `
@@ -67,10 +64,9 @@ const markup = images
   )
   .join('');
 
-// Вставляем разметку в галерею
+
 gallery.innerHTML = markup;
 
-// Обработчик клика на изображении в галерее
 gallery.addEventListener('click', event => {
   event.preventDefault();
 
