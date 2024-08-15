@@ -57,7 +57,7 @@ const markup = images
     ({ preview, original, description }) => `
     <li class="gallery-item">
       <a class="gallery-link" href="${original}">
-        <img class="gallery-image" src="${preview}" alt="${description}" data-original="${original}" />
+        <img class="gallery-image" src="${preview}" alt="${description}" data-source="${original}" />
       </a>
     </li>
   `
@@ -71,7 +71,7 @@ gallery.addEventListener('click', event => {
   event.preventDefault();
 
   if (event.target.tagName === 'IMG') {
-    const originalImageSrc = event.target.getAttribute('data-original');
+    const originalImageSrc = event.target.getAttribute('data-source');
 
     const instance = basicLightbox.create(`
       <div class="modal">
